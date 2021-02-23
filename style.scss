@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+$orange-main: #CD6326;
+$orange-light: #E39128;
+$orange-dark: #8F5613;
+$font-light: #F7F7F7;
+$font-grey: #666666;
+$font-dark: #333333;
+%h1-orange {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: 2px;
+    color: $orange-main;
+}
+%h2-dark {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: $font-dark;
+}
+%sh-2-grey {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: $font-grey;
+}
+%h-3-dark {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 40px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: $font-dark;
+}
+%h-4-light {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    /* identical to box height, or 164% */
+    text-align: center;
+    color: $font-light;
+}
+%font-logo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 60px;
+    /* identical to box height, or 187% */
+    text-transform: uppercase;
+    color: $font-light;
+}
+%font-menu {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 60px;
+    /* identical to box height, or 261% */
+    color: $font-light;
+}
+%font-regular {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    /* identical to box height */
+    text-align: center;
+    color: $font-light;
+}
+%font-regular-light {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 150% */
+    color: $font-light;
+}
+%font-small-light {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    /* identical to box height, or 159% */
+    color: #F7F7F7;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    position: relative;
+    width: 1440px;
+    height: 2508px;
+    background: #FFFFFF;
+}
+#hero {
+    position: absolute;
+    width: 1440px;
+    height: 779px;
+    left: 0px;
+    top: 1px;
+    background-image: url(../assets/images/backgournd-hero.png);
+}
+.logo {
+    position: absolute;
+    top: 19px;
+    left: 120px;
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    height: 60px;
+    h1 {
+        width: 155px;
+        @extend %font-logo;
+    }
+}
+.menu {
+    position: absolute;
+    top: 19px;
+    right: 120px;
+    display: flex;
+    justify-content: space-between;
+    img {
+        padding-top: 20px;
+        &:hover {
+            transform: scale(1.2)
+        }
+    }
+    ul {
+        padding: 0px;
+        width: 480px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+    li {
+        list-style: none;
+        a {
+            @extend %font-menu;
+        }
+        a:hover {
+            color: #CD6326;
+            fill:#CD6326
+        }
+    }
+    li:last-child {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        border: 2px solid $orange-main;
+        box-sizing: border-box;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        @extend %font-regular;
+    }
+}
+.description {
+    position: absolute;
+    top: 199px;
+    left: 120px;
+    width: 274px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    h1 {
+        @extend %h1-orange;
+    }
+    p {
+        @extend %font-regular-light;
+    }
+    button {
+        width: 160px;
+        height: 60px;
+        background: $orange-main;
+        border-radius: 5px;
+        @extend %font-regular;
+    }
+}
+#main {
+    position: absolute;
+    width: 1440px;
+    height: 1368px;
+    left: 0px;
+    top: 780px;
+    background: #CCCCCC;
+}
+.title {
+    position: absolute;
+    width: 332px;
+    height: 128px;
+    left: 554px;
+    top: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    h2 {
+        @extend %h2-dark;
+    }
+    h3 {
+        @extend %sh-2-grey;
+    }
+}
+.slider {
+    position: absolute;
+    width: 1200px;
+    height: 360px;
+    top: 368px;
+    left: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 60px;
+    &-prev {
+       img {
+           padding-top: 12px; //maybe delete it
+       }
+    }
+    
+}
+.slider-content {
+    width: 1020px;
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+    // column-gap: 60px;
+    h4 {
+        @extend %h-4-light;
+    }
+    h5 {
+        @extend %font-small-light;
+    }
+}
+@mixin slider-test ($top, $left) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 300px;
+    height: 73px;
+    top: $top;
+    left: $left;
+}
+.slider-text-1 {
+    @include slider-test (248px, 89px)
+}
+.slider-text-2 {
+    @include slider-test (248px, 449px)
+}
+.slider-text-3 {
+    @include slider-test (248px, 811px)
+}
+.mail-wrapper {
+    position: absolute;
+    top: 968px;
+    left: 389px;
+    width: 660px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    text-align: center;
+    h3 {
+        @extend %h-3-dark
+    }
+}
+.mail-box {
+    width: 100%;
+    form {
+        height: 61px;
+        display: flex;
+    }
+    input {
+        width: 540px;
+        border: 1px solid $font-grey;
+    }
+    input:placeholder-shown {
+        text-align: left;
+        padding-left: 13px;
+        padding-top: 5px;
+        left: 20px;
+        @extend %font-regular;
+        color: #666666;
+    }
+    button {
+        width: 120px;
+        background: $orange-main;
+        border: 1px solid $orange-main;
+        border-radius: 0px 5px 5px 0px;
+    }
+    h2 {
+        @extend %font-regular;
+    }
+}
+#footer {
+    position: absolute;
+    width: 1440px;
+    height: 359px;
+    left: 0px;
+    top: 2148px;
+    background-image: url(../assets/images/backgorund-footer.jpg);
+}
+.footer-wrapper {
+    position: absolute;
+    left: 120px;
+    top: 150px;
+    width: 1200px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    .logo {
+        position: unset;
+    }
+    .footer-nav {
+        width: 476px;
+        display: flex;
+        ul {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            @extend %font-menu;
+        }
+        li {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+    .footer-socials {
+        width: 240px;
+        display: flex;
+        ul {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+        li a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $font-light;
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover {
+                background-color: white;
+                filter: contrast(2)
+            }
+        }
+    }
+}
+
+
