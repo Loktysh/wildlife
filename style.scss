@@ -123,6 +123,13 @@ body {
     width: 1440px;
     height: 2508px;
     background: #FFFFFF;
+    overflow: hidden;
+}
+#wrapper-bg {
+    position: absolute;
+    width: 100%;
+    height: 2508px;
+    z-index: -1;
 }
 #hero {
     position: absolute;
@@ -131,6 +138,14 @@ body {
     left: 0px;
     top: 1px;
     background-image: url(../assets/images/backgournd-hero.png);
+    filter: drop-shadow(0px 0px 250px #02160B);
+    &-bg {
+        position: absolute;
+        top: 1px;
+        width: 100%;
+        height: 779px;
+        background-color: #02160B;
+    }
 }
 .logo {
     position: absolute;
@@ -220,6 +235,15 @@ body {
     left: 0px;
     top: 780px;
     background: #CCCCCC;
+    &-bg {
+        // position: absolute;
+        // top: 1px;
+        // width: 100%;
+        // height: 779px;
+        // background-color: #02160B;
+        @extend #main;
+        width: 100%;
+    }
 }
 .title {
     position: absolute;
@@ -237,6 +261,7 @@ body {
         @extend %sh-2-grey;
     }
 }
+
 .slider {
     position: absolute;
     width: 1200px;
@@ -253,8 +278,13 @@ body {
            padding-top: 12px; //maybe delete it
        }
     }
-    
+    &-prev:hover, &-next:hover {
+        img {
+            filter: drop-shadow(2px 2px 6px black); 
+        }
+    }   
 }
+
 .slider-content {
     width: 1020px;
     height: 360px;
@@ -339,6 +369,11 @@ body {
     left: 0px;
     top: 2148px;
     background-image: url(../assets/images/backgorund-footer.jpg);
+    &-bg {
+        @extend #footer;
+        width: 100%;
+        background: #181617;
+    }
 }
 .footer-wrapper {
     position: absolute;
@@ -366,6 +401,9 @@ body {
         li {
             padding: 0px;
             margin: 0px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     .footer-socials {
